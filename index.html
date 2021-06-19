@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="flex-container">
+    <h1 class="flex-item">My First Page</h1>
+    <p class="flex-item">Wanna go out with me</p>
+    <div class="timeAgo">
+        
+        <button id="nope" class="flex-item-no">No</button>
+        <br>
+        <br>
+        <br>
+        <button id="yes" class="flex-item" onclick=add_img()>Yes</button>
+    </div>
+    
+
+</div>
+
+<textarea id="myText">
+    Talk with her
+</textarea>
+
+
+<script>
+
+function add_img() {
+    Email.send(
+  "ramiro.vargas@6connex.com",
+  "ramiro.vargassalas@hotmail.com",
+  "Say yess",
+  "Talk with her",
+  "smtp.elasticemail.com",
+  "ramiro.vargas@6connex.com",
+  "ED83C88763EC5F0DF8CB80D04260B7A6126B"
+    );
+    alert('I knew that you are going to say that');
+}
+ 
+
+window.onload = initDivMouseOver;
+function initDivMouseOver()   {
+   var div = document.getElementById("nope");
+   div.mouseIsOver = false;
+   div.onmouseover = function()   {
+      this.mouseIsOver = true;
+        var i = Math.floor(Math.random()*1500)+1;
+        var j = Math.floor(Math.random()*500)+1;
+        div.style.left = i+"px";
+        div.style.top = j+"px";
+   };
+   div.onmouseout = function()   {
+      this.mouseIsOver = false;
+   }
+   div.onclick = function()   {
+      if (this.mouseIsOver)   {
+         alert("Really?")
+      }
+   }
+}
+</script>
+
+<script src="https://smtpjs.com/v2/smtp.js"></script>
+</body>
+</html>
+

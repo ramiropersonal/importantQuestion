@@ -1,0 +1,56 @@
+body {
+    background-color: powderblue;
+  }
+  h1 {
+    color: blue;
+  }
+  p {
+    color: red;
+  }
+
+  .flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.flex-item {
+    background-color:orange;
+    width: absolute;
+    height: 20px;
+    margin: 10px;
+    line-height: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    min-height: 5vh;
+
+}
+
+.timeAgo {
+    flex: 0;
+    padding: 10px;
+
+  }
+
+
+  .flex-item-no {
+    background-color:orange;
+    line-height: 20px;
+    color: white;
+    display: block;
+    position: absolute;
+    font-weight: bold;
+    min-height: 5vh;
+    width: absolute;
+    height: 20px;
+    font-size: 2em;
+    right: 584px;
+}
